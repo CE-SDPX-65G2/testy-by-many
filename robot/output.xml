@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231011 15:31:47.595" rpa="false" schemaversion="4">
+<suite id="s1" name="Test-Calculate" source="C:\Users\tavan\Documents\GitHub\testy-by-many\robot\test-calculate.robot">
+<test id="s1-t1" name="Test Calculate Numbers 4 and 2 (ฺBefore Using Keywords)" line="19">
+<kw name="GET">
+<var>${resp}</var>
+<arg>http://127.0.0.1:5001/calculate/4/2</arg>
+<msg timestamp="20231011 15:31:47.626" level="FAIL">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</msg>
+<status status="FAIL" starttime="20231011 15:31:47.626" endtime="20231011 15:31:47.626"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>${200}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.626" endtime="20231011 15:31:47.626"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${json_resp}</var>
+<arg>${resp.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.626" endtime="20231011 15:31:47.626"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['plus']}</arg>
+<arg>${6}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.627" endtime="20231011 15:31:47.627"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['minus']}</arg>
+<arg>${2}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.627" endtime="20231011 15:31:47.627"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['multiply']}</arg>
+<arg>${8}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.627" endtime="20231011 15:31:47.627"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['divide']}</arg>
+<arg>${2}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.627" endtime="20231011 15:31:47.627"/>
+</kw>
+<status status="FAIL" starttime="20231011 15:31:47.624" endtime="20231011 15:31:47.628">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</status>
+</test>
+<test id="s1-t2" name="Test Calculate Numbers 8.4 and 4 (ฺBefore Using Keywords)" line="42">
+<kw name="GET">
+<var>${resp}</var>
+<arg>http://127.0.0.1:5001/calculate/8.4/4</arg>
+<msg timestamp="20231011 15:31:47.630" level="FAIL">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</msg>
+<status status="FAIL" starttime="20231011 15:31:47.630" endtime="20231011 15:31:47.630"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>${200}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.630" endtime="20231011 15:31:47.630"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${json_resp}</var>
+<arg>${resp.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.630" endtime="20231011 15:31:47.630"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['plus']}</arg>
+<arg>${12.4}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.631" endtime="20231011 15:31:47.631"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['minus']}</arg>
+<arg>${4.4}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.631" endtime="20231011 15:31:47.631"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['multiply']}</arg>
+<arg>${33.6}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.631" endtime="20231011 15:31:47.631"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['divide']}</arg>
+<arg>${2.1}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.632" endtime="20231011 15:31:47.632"/>
+</kw>
+<status status="FAIL" starttime="20231011 15:31:47.628" endtime="20231011 15:31:47.632">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</status>
+</test>
+<test id="s1-t3" name="Test Calculate Numbers 4 and 2" line="65">
+<kw name="Get Calculation JSON">
+<var>${json_resp}</var>
+<arg>${4}</arg>
+<arg>${2}</arg>
+<kw name="GET">
+<var>${resp}</var>
+<arg>http://127.0.0.1:5001/calculate/${num1}/${num2}</arg>
+<msg timestamp="20231011 15:31:47.635" level="FAIL">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</msg>
+<status status="FAIL" starttime="20231011 15:31:47.635" endtime="20231011 15:31:47.635"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>${200}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.635" endtime="20231011 15:31:47.635"/>
+</kw>
+<status status="FAIL" starttime="20231011 15:31:47.633" endtime="20231011 15:31:47.635"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['plus']}</arg>
+<arg>${6}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.636" endtime="20231011 15:31:47.636"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['minus']}</arg>
+<arg>${2}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.636" endtime="20231011 15:31:47.636"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['multiply']}</arg>
+<arg>${8}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.636" endtime="20231011 15:31:47.636"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['divide']}</arg>
+<arg>${2}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.636" endtime="20231011 15:31:47.636"/>
+</kw>
+<status status="FAIL" starttime="20231011 15:31:47.633" endtime="20231011 15:31:47.637">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</status>
+</test>
+<test id="s1-t4" name="Test Calculate Numbers 8.4 and 4" line="82">
+<kw name="Get Calculation JSON">
+<var>${json_resp}</var>
+<arg>${8.4}</arg>
+<arg>${4}</arg>
+<kw name="GET">
+<var>${resp}</var>
+<arg>http://127.0.0.1:5001/calculate/${num1}/${num2}</arg>
+<msg timestamp="20231011 15:31:47.640" level="FAIL">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</msg>
+<status status="FAIL" starttime="20231011 15:31:47.640" endtime="20231011 15:31:47.640"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>${200}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.640" endtime="20231011 15:31:47.640"/>
+</kw>
+<status status="FAIL" starttime="20231011 15:31:47.638" endtime="20231011 15:31:47.640"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['plus']}</arg>
+<arg>${12.4}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.641" endtime="20231011 15:31:47.641"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['minus']}</arg>
+<arg>${4.4}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.641" endtime="20231011 15:31:47.641"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['multiply']}</arg>
+<arg>${33.6}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.641" endtime="20231011 15:31:47.641"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${json_resp['divide']}</arg>
+<arg>${2.1}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20231011 15:31:47.641" endtime="20231011 15:31:47.641"/>
+</kw>
+<status status="FAIL" starttime="20231011 15:31:47.638" endtime="20231011 15:31:47.642">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</status>
+</test>
+<status status="FAIL" starttime="20231011 15:31:47.597" endtime="20231011 15:31:47.643"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="4" skip="0" id="s1" name="Test-Calculate">Test-Calculate</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231011 15:31:47.620" level="ERROR">Error in file 'C:\Users\tavan\Documents\GitHub\testy-by-many\robot\test-calculate.robot' on line 2: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\tavan\miniconda3\Scripts\robot.exe
+  C:\Users\tavan\miniconda3\python311.zip
+  C:\Users\tavan\miniconda3\DLLs
+  C:\Users\tavan\miniconda3\Lib
+  C:\Users\tavan\miniconda3
+  C:\Users\tavan\miniconda3\Lib\site-packages</msg>
+</errors>
+</robot>
